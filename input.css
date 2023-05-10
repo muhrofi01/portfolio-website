@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#menu-toggle-button span {
+  transition: 0.5s;
+}
+
+#menu-toggle-button.active span:nth-child(1) {
+  transform: scaleX(1) scaleY(0.8) rotate(45deg) translate(4px, -1px);
+}
+
+#menu-toggle-button.active span:nth-child(3) {
+  transform: scaleX(1) scaleY(0.8) rotate(-45deg) translate(4px, 1px);
+}
+
+#sidebar-menu {
+  transform: translateX(210px);
+  transition: 0.5s;
+}
+
+#sidebar-menu.slide {
+  transform: translateX(0);
+}

@@ -5,7 +5,133 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="output.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Muhammad Abdurrofi</title>
   </head>
-  <body></body>
+  <body class="dark:bg-slate-800">
+    <nav class="py-2 px-3 fixed right-0 left-0 md:py-3 md:px-5 z-20">
+      <div
+        class="h-[50px] w-full mx-auto px-3 flex justify-between items-center rounded-xl border-2 bg-white border-slate-100 shadow-xl md:h-[60px] md:px-5 lg:container relative -z-10 dark:bg-slate-800 dark:border-slate-900"
+      >
+        <a
+          href=""
+          class="text-lg font-bold sm:text-xl md:text-2xl relative -z-10 text-slate-900 dark:text-white"
+          >Muh<span class="text-purple-600">Rofi</span></a
+        >
+
+        <button
+          id="menu-toggle-button"
+          class="w-[20px] h-[20px] relative flex flex-col justify-around z-20 md:hidden"
+        >
+          <span class="w-[20px] h-[3px] bg-slate-900 dark:bg-white"></span>
+          <span class="w-[20px] h-[3px] bg-slate-900 dark:bg-white"></span>
+          <span class="w-[20px] h-[3px] bg-slate-900 dark:bg-white"></span>
+        </button>
+
+        <div
+          id="sidebar-menu"
+          class="h-screen fixed top-0 right-0 rounded-tl-xl rounded-bl-xl bg-white md:hidden dark:bg-slate-900"
+        >
+          <div class="pt-[70px] flex flex-col">
+            <a
+              href="/"
+              class="py-1 pl-4 pr-[74px] text-slate-900 hover:bg-purple-600 dark:text-white"
+              >Home</a
+            >
+            <a
+              href=""
+              class="py-1 pl-4 pr-[74px] text-slate-900 hover:bg-purple-600 dark:text-white"
+              >About</a
+            >
+            <a
+              href=""
+              class="py-1 pl-4 pr-[74px] text-slate-900 hover:bg-purple-600 dark:text-white"
+              >Portfolio</a
+            >
+            <a
+              href=""
+              class="py-1 pl-4 pr-[74px] text-slate-900 hover:bg-purple-600 dark:text-white"
+              >Contact</a
+            >
+          </div>
+        </div>
+
+        <div class="hidden md:block">
+          <ul class="w-[400px] flex justify-between">
+            <li>
+              <a
+                href="/"
+                class="font-semibold text-slate-900 hover:text-purple-600 dark:text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="font-semibold text-slate-900 hover:text-purple-600 dark:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="font-semibold text-slate-900 hover:text-purple-600 dark:text-white"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="font-semibold text-slate-900 hover:text-purple-600 dark:text-white"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div
+          id="background-sidebar"
+          class="hidden w-screen h-screen fixed top-0 left-0 bg-black opacity-50 -z-10"
+        ></div>
+      </div>
+    </nav>
+
+    <script>
+      const sidebarMenu = document.getElementById("sidebar-menu");
+      const menuToggleButton = document.getElementById("menu-toggle-button");
+      const backgroundSidebar = document.getElementById("background-sidebar");
+
+      menuToggleButton.addEventListener("click", () => {
+        sidebarMenu.classList.toggle("slide");
+        backgroundSidebar.classList.toggle("hidden");
+        menuToggleButton.classList.toggle("active");
+      });
+
+      if (matchMedia) {
+        const mq = window.matchMedia("(min-width: 768px)");
+        mq.addListener(WidthChange);
+        WidthChange(mq);
+      }
+
+      function WidthChange(mq) {
+        if (mq.matches) {
+          sidebarMenu.classList.remove("slide");
+          backgroundSidebar.classList.add("hidden");
+          menuToggleButton.classList.remove("active");
+        }
+      }
+
+      window.onclick = (event) => {
+        if (event.target === backgroundSidebar) {
+          sidebarMenu.classList.remove("slide");
+          backgroundSidebar.classList.add("hidden");
+          menuToggleButton.classList.remove("active");
+        }
+        if (event.target !== menuProduk) {
+          menuProduk.classList.remove("border-b-[3px]");
+          subMenuProduk.classList.remove("flex");
+          subMenuProduk.classList.add("hidden");
+        }
+      };
+    </script>
+  </body>
 </html>
