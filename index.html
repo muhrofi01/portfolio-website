@@ -14,14 +14,20 @@
     <title>My Portfolio | Muhammad Abdurrofi</title>
   </head>
   <body class="">
-    <nav class="py-2 px-3 fixed right-0 left-0 md:py-3 md:px-5 z-20">
+    <nav class="max-w-[992px] mx-auto pt-2 fixed right-0 left-0 md:pt-3 z-20">
       <div
-        class="h-[50px] w-full mx-auto px-3 flex justify-between items-center rounded-xl border-2 bg-white border-slate-100 shadow-xl md:h-[60px] md:px-5 lg:container relative -z-10"
+        class="h-[50px] mx-auto px-3 flex justify-between items-center rounded-xl border-2 bg-white border-slate-100 shadow-xl md:h-[60px] md:px-5 lg:container relative -z-10"
       >
         <a
           href=""
-          class="text-lg font-bold sm:text-xl md:text-2xl relative -z-10 text-slate-900"
+          class="text-lg font-bold sm:text-xl md:text-2xl relative -z-10 text-slate-900 block md:hidden"
           >Muh<span class="text-purple-600">Rofi</span></a
+        >
+
+        <a
+          href=""
+          class="font-bold text-xl relative -z-10 text-slate-900 hidden md:block"
+          >Muhammad <span class="text-purple-600">Abdurrofi</span></a
         >
 
         <button
@@ -39,22 +45,22 @@
         >
           <div class="pt-[70px] flex flex-col">
             <a
-              href="/"
+              href="#home"
               class="py-1 pl-4 pr-[74px] text-slate-900 hover:bg-purple-600"
               >Home</a
             >
             <a
-              href=""
+              href="#about"
               class="py-1 pl-4 pr-[74px] text-slate-900 hover:bg-purple-600"
               >About</a
             >
             <a
-              href=""
+              href="#portfolio"
               class="py-1 pl-4 pr-[74px] text-slate-900 hover:bg-purple-600"
               >Portfolio</a
             >
             <a
-              href=""
+              href="#contact"
               class="py-1 pl-4 pr-[74px] text-slate-900 hover:bg-purple-600"
               >Contact</a
             >
@@ -65,28 +71,28 @@
           <ul class="w-[400px] flex justify-between">
             <li>
               <a
-                href="/"
+                href="#home"
                 class="font-semibold text-slate-900 hover:text-purple-600"
                 >Home</a
               >
             </li>
             <li>
               <a
-                href=""
+                href="#about"
                 class="font-semibold text-slate-900 hover:text-purple-600"
                 >About</a
               >
             </li>
             <li>
               <a
-                href=""
+                href="#portfolio"
                 class="font-semibold text-slate-900 hover:text-purple-600"
                 >Portfolio</a
               >
             </li>
             <li>
               <a
-                href=""
+                href="#contact"
                 class="font-semibold text-slate-900 hover:text-purple-600"
                 >Contact</a
               >
@@ -101,39 +107,56 @@
       </div>
     </nav>
 
-    <main class="py-[130px]">
-      <section>
-        <div class="mx-auto container grid grid-cols-1">
-          <div>
-            <h1 class="text-center text-lg font-semibold">
-              Helloo, <br />
-              <span class="text-3xl font-bold text-purple-600">
+    <main class="py-[80px]">
+      <section id="home">
+        <div
+          class="mx-auto px-4 place-items-center max-w-[992px] grid grid-cols-1 sm:px-6 md:px-8 md:grid-cols-2"
+        >
+          <div class="h-fit">
+            <h1
+              class="text-center text-lg font-semibold sm:text-xl md:text-left lg:text-2xl"
+            >
+              Hello, <br />
+              <span
+                class="text-3xl font-bold text-purple-600 sm:text-4xl lg:text-5xl"
+              >
                 I'm Muhammad Abdurrofi</span
               >
             </h1>
-            <h2 class="m-2 text-center text-lg font-semibold">
+            <h2
+              class="mt-2 text-center text-lg font-semibold sm:text-xl md:text-left lg:text-2xl"
+            >
               Freelance Web Designer & Developer
             </h2>
           </div>
-          <div class="place-items-center">
+          <div class="relative">
             <div>
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                viewBox="0 0 200 200"
+                class="w-[300px] mx-auto sm:w-[400px] lg:w-[500px]"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   fill="#8A3FFC"
                   d="M40.2,-48.3C54.3,-45.1,69.5,-36.3,73.1,-24C76.7,-11.8,68.6,3.9,62,18.8C55.3,33.7,50.1,47.8,40,54.9C29.9,61.9,15,62.1,0.5,61.4C-14,60.8,-28,59.4,-38.5,52.4C-49,45.4,-55.9,32.9,-56,21C-56,9,-49.2,-2.4,-47.6,-18C-46,-33.7,-49.7,-53.6,-42.7,-59.2C-35.6,-64.7,-17.8,-55.8,-2.4,-52.5C13,-49.2,26.1,-51.5,40.2,-48.3Z"
                   transform="translate(100 100)"
                 />
               </svg>
+              <img
+                src="assets/rofi.png"
+                alt="Muhammad Abdurrofi"
+                class="w-[200px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:w-[250px] lg:w-[300px]"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="p-4 bg-purple-100">
-        <h2 class="mb-6 text-center text-3xl font-bold">
+      <section id="about" class="p-4 bg-purple-100">
+        <h2 class="mb-6 text-center text-3xl font-bold sm:text-4xl">
           About <span class="text-purple-600">Me</span>
         </h2>
-        <p class="text-center">
+        <p class="text-center max-w-[638px] mx-auto">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur,
           quaerat cupiditate, asperiores dolores consequuntur beatae ipsa
           tempore at unde velit culpa, dolorum harum laudantium! Natus molestias
@@ -141,13 +164,68 @@
         </p>
       </section>
 
-      <section class="mt-8">
-        <h2 class="mb-6 text-center text-3xl font-bold">My Portfolio</h2>
-        <div>
-          <div>
-            
+      <section id="portfolio" class="mt-10 px-4">
+        <h2 class="mb-6 text-center text-3xl font-bold sm:text-4xl">
+          My Portfolio
+        </h2>
+        <div
+          class="max-w-[992px] mx-auto flex flex-wrap justify-center items-center gap-4"
+        >
+          <div class="rounded-xl bg-purple-600 max-w-xs">
+            <a target="_blank" href="https://www.ifi.or.id/">
+              <img src="assets/ifi.jpg" alt="Website IFI" class="rounded-xl" />
+            </a>
+            <div class="py-2 px-4">
+              <h4 class="text-slate-50 font-medium sm:text-lg">
+                Ikatan Fisioterapi Indonesia
+              </h4>
+            </div>
+          </div>
+          <div class="rounded-xl bg-purple-600 max-w-xs">
+            <a target="_blank" href="https://simpus.stis.ac.id/">
+              <img
+                src="assets/simpus.jpg"
+                alt="Website SIMPus"
+                class="rounded-xl"
+              />
+            </a>
+            <div class="py-2 px-4">
+              <h4 class="text-slate-50 font-medium sm:text-lg">
+                SIMPus Polstat STIS
+              </h4>
+            </div>
+          </div>
+          <div class="rounded-xl bg-purple-600 max-w-xs">
+            <a target="_blank" href="https://emsaemsikonveksi.com/">
+              <img
+                src="assets/emsaemsi.jpg"
+                alt="Website EmsaEmsi Konveksi"
+                class="rounded-xl"
+              />
+            </a>
+            <div class="py-2 px-4">
+              <h4 class="text-slate-50 font-medium sm:text-lg">
+                EmsaEmsi Konveksi
+              </h4>
+            </div>
+          </div>
+          <div class="rounded-xl bg-purple-600 max-w-xs">
+            <a target="_blank" href="https://www.ngambiskuy.com/">
+              <img
+                src="assets/ngambiskuy.jpg"
+                alt="Website Ngambiskuy"
+                class="rounded-xl"
+              />
+            </a>
+            <div class="py-2 px-4">
+              <h4 class="text-slate-50 font-medium sm:text-lg">Ngambiskuy</h4>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section id="contact" class="mt-10 px-4">
+        <h2 class="mb-6 text-center text-3xl font-bold">Contact Me</h2>
       </section>
     </main>
 
